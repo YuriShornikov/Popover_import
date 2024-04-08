@@ -7,6 +7,11 @@ module.exports = {
   devServer: {
     port: 8080
   },
+  resolve: {
+    alias: {
+      '@popperjs/core': path.resolve(__dirname, 'node_modules/@popperjs/core/dist/esm/popper.js')
+    }
+  },
   devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist')
