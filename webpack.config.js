@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+/*eslint-env node*/
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -9,7 +10,10 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@popperjs/core': path.resolve(__dirname, 'node_modules/@popperjs/core/dist/esm/popper.js')
+      '@popperjs/core': path.resolve(
+        __dirname,
+        'node_modules/@popperjs/core/dist/esm/popper.js'
+      )
     }
   },
   devtool: 'source-map',
@@ -50,4 +54,3 @@ module.exports = {
     })
   ]
 };
-/* eslint-disable no-undef */
